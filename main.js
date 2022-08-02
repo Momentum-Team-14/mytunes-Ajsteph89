@@ -23,6 +23,10 @@ resultsArea.classList.add('resultsBar')
 resultsArea.innerText = 'Search Results:'
 container.appendChild(resultsArea)
 
+let displayArea = document.createElement('div')
+displayArea.classList.add('displayArea')
+container.appendChild(displayArea)
+
 
 //fetch stuff
 let searchUrl = 'https://itunes.apple.com/search?term=iron%2Bmaiden'
@@ -39,7 +43,8 @@ let searchUrl = 'https://itunes.apple.com/search?term=iron%2Bmaiden'
         let searchResults = data.results
         showSongName(searchResults)
     })
-//function for displaying song results
+
+    //function for displaying song results
 function showSongName(songArray) {
     for (let song of songArray){
         let songReturnDiv = document.createElement('div')
@@ -48,23 +53,22 @@ function showSongName(songArray) {
         //div for song thumbnail with class
         let songImg = document.createElement('img')
         songImg.classList.add('songImage')
-        songImg.scr = `${song.artworkUrl100}`
+        songImg.src = `${song.artworkUrl100}`
         
         //song title div with class
         let songTitle = document.createElement('div')
         songTitle.classList.add('songTitle')
-        songTitle.innerText = `${song.trackName}`
+        songTitle.innerText = `Song: ${song.trackName}`
         
         //Band name
         let bandName = document.createElement('div')
         bandName.classList.add('bandName')
-        bandName.innerText = `${song.artistName}`
+        bandName.innerText = `Artist: ${song.artistName}`
         
         songReturnDiv.appendChild(songImg)
         songReturnDiv.appendChild(songTitle)
         songReturnDiv.appendChild(bandName)
-        resultsArea.appendChild(songReturnDiv)
+        displayArea.appendChild(songReturnDiv)
     }
 }
 
-   
