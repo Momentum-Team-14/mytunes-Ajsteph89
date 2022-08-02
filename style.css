@@ -1,0 +1,18 @@
+.container {
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.resultsBar {
+    border: 2px solid red;
+
+}
+
+.searchBar {
+    border: 2px solid black;
+    width: 100%;
+}
+
+.typeBox {
+    width: 
+}
