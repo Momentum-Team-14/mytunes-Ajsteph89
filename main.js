@@ -48,6 +48,12 @@ function showSongName(songArray) {
         let songReturnDiv = document.createElement('div')
         songReturnDiv.classList.add('songReturn')
         
+        //audio preview
+        let audioPlay = document.querySelector('.audioPlay')
+        songReturnDiv.addEventListener('click', ()=>
+            audioPlay.src = `${song.previewUrl}`
+        )
+
         //div for song thumbnail with class
         let songImg = document.createElement('img')
         songImg.classList.add('songImage')
