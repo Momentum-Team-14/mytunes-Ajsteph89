@@ -3,25 +3,30 @@
     src: url('PressStart2P-Regular.ttf');
 }
 body {
-    background: lightslategray;
-    
+    background-image: url('lazers.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    background-attachment: fixed;
 }
+
 header {
     font-family: 'retro-font';
     font-size: 5rem;
     color: black;
     text-align: center;
     padding: 2rem;
-    background-color: lightseagreen;
+    background-color: rgb(236, 39, 138);
     border-radius: 50%;
 }
 
 .audioPlay{
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 .searchBar {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
     width: 100%;
     color: black;
@@ -35,7 +40,7 @@ header {
     font-size: larger;
     font-weight: bolder;
     color: black;
-    background-color: lightseagreen;
+    background-color: rgb(236, 39, 138);
     border-radius: 50%;
     text-align: center;
     padding: 1rem;
@@ -45,12 +50,14 @@ header {
 .displayArea {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .songReturn {
     text-align: center;
-    max-width: 10rem;
-    max-height: 10rem;
+    width: 10rem;
+    height: 10rem;
     padding: 1rem;
     color: white;
 }
@@ -79,4 +86,14 @@ button {
     color: black;
     font-family: 'retro-font';
     height: 2rem;
+}
+
+.nowPlaying {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgb(98, 0, 255);
+    border-radius: 50%;
+    padding: .5rem;
+
 }

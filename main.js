@@ -14,11 +14,13 @@ form.addEventListener('submit', function(event) {
 
 //Results Area with class
 let resultsArea = document.createElement('div')
+
 resultsArea.classList.add('resultsBar')
 resultsArea.innerText = 'Search Results:'
 container.appendChild(resultsArea)
 
 let displayArea = document.createElement('div')
+
 displayArea.classList.add('displayArea')
 container.appendChild(displayArea)
 
@@ -48,10 +50,13 @@ function showSongName(songArray) {
         
         //audio preview
         let audioPlay = document.querySelector('.audioPlay')
-        songReturnDiv.addEventListener('click', ()=>
+        let nowPlay = document.querySelector('.nowPlaying')
+        
+        songReturnDiv.addEventListener('click', ()=> {
             audioPlay.src = `${song.previewUrl}`
+            nowPlay.innerText = `Now Playing: ${song.trackName} by ${song.artistName}`
+        }
         )
-
         //div for song thumbnail with class
         let songImg = document.createElement('img')
         songImg.classList.add('songImage')
