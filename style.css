@@ -1,6 +1,21 @@
-body {
-    background: lightblue;
+@font-face {
+    font-family: 'retro-font';
+    src: url('PressStart2P-Regular.ttf');
 }
+body {
+    background: lightslategray;
+    
+}
+header {
+    font-family: 'retro-font';
+    font-size: 5rem;
+    color: black;
+    text-align: center;
+    padding: 2rem;
+    background-color: lightseagreen;
+    border-radius: 50%;
+}
+
 .audioPlay{
     width: 100%;
 }
@@ -9,6 +24,8 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 100%;
+    color: black;
+    text-align: center;
 }
 
 .typeBox {
@@ -17,6 +34,12 @@ body {
 .resultsBar {
     font-size: larger;
     font-weight: bolder;
+    color: black;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'retro-font';
 }
 
 .displayArea {
@@ -29,6 +52,7 @@ body {
     max-width: 10rem;
     max-height: 10rem;
     padding: 1rem;
+    color: white;
 }
 
 .bandName {
@@ -45,4 +69,14 @@ body {
     width: 5rem;
     border: 1px solid black;
 
+}
+
+audio {
+    padding-top: 2rem;
+}
+
+button {
+    color: black;
+    font-family: 'retro-font';
+    height: 2rem;
 }

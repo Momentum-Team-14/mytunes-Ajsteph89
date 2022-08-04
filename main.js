@@ -1,7 +1,5 @@
 const container = document.querySelector(".container")
 
-//Now playing 
-
 
 //search bar & button
 
@@ -42,7 +40,7 @@ function fetchyFetch(searchUrl){
         showSongName(searchResults)
     })
 }
-    //function for displaying song results
+//function for displaying song results
 function showSongName(songArray) {
     for (let song of songArray){
         let songReturnDiv = document.createElement('div')
