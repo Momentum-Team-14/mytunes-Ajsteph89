@@ -4,18 +4,15 @@ const container = document.querySelector(".container")
 
 
 //search bar & button
-let searchBar = document.createElement('div')
-searchBar.classList.add('searchBar')
-container.appendChild(searchBar)
 
-let typeBox = document.createElement('input')
-typeBox.classList.add('typeBox')
-searchBar.appendChild(typeBox)
+let searchUrl = 'https://itunes.apple.com/search?term='
 
-let searchButton = document.createElement('button')
-searchButton.innerText = "SEARCH"
-searchButton.classList.add('button')
-searchBar.appendChild(searchButton)
+let form = document.querySelector('.searchBar')
+form.addEventListener('submit', function(event) {
+    let typeBox = document.querySelector('.typeBox')
+    event.preventDefault()
+    fetchyFetch(searchUrl + typeBox.value)
+})
 
 //Results Area with class
 let resultsArea = document.createElement('div')
@@ -27,9 +24,9 @@ let displayArea = document.createElement('div')
 displayArea.classList.add('displayArea')
 container.appendChild(displayArea)
 
-
 //fetch stuff
-let searchUrl = 'https://itunes.apple.com/search?term=iron%2Bmaiden'
+function fetchyFetch(searchUrl){
+    console.log (searchUrl)
     fetch(searchUrl,{
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
@@ -41,9 +38,10 @@ let searchUrl = 'https://itunes.apple.com/search?term=iron%2Bmaiden'
     //data is whatever the above code returns
     .then(function (data){
         let searchResults = data.results
+        displayArea.innerText = ''
         showSongName(searchResults)
     })
-
+}
     //function for displaying song results
 function showSongName(songArray) {
     for (let song of songArray){

@@ -1,16 +1,18 @@
-.container {
+body {
+    background: lightblue;
 }
 .audioPlay{
     width: 100%;
 }
 
 .searchBar {
-    border: 2px solid black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     width: 100%;
 }
 
 .typeBox {
-    width: 
+    width: 25vw;
 }
 .resultsBar {
     font-size: larger;
@@ -41,5 +43,6 @@
 .songImage {
     height: 5rem;
     width: 5rem;
+    border: 1px solid black;
 
 }
